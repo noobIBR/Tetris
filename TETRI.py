@@ -65,13 +65,11 @@ def rotate_figure(figure):
 def adjust_position(board, shape, x, y):
     max_width = len(shape[0])
     max_height = len(shape)
-
     # Корректируем горизонтальное положение
     if x < 0:
         x = 0
     elif x + max_width > width:
         x = width - max_width
-
     # Корректируем вертикальное положение
     if y + max_height > height:
         y = height - max_height
