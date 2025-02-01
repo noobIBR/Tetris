@@ -65,12 +65,12 @@ def rotate_figure(figure):
 def adjust_position(board, shape, x, y):
     max_width = len(shape[0])
     max_height = len(shape)
-    # Корректируем горизонтальное положение
+    # Корректировка горизонтальное положение
     if x < 0:
         x = 0
     elif x + max_width > width:
         x = width - max_width
-    # Корректируем вертикальное положение
+    # Корректировка вертикальное положение
     if y + max_height > height:
         y = height - max_height
 
@@ -119,7 +119,8 @@ def game():
             board, lines_cleared = clear_line(board)
             score += lines_cleared * 100
             current_figure = random.choice(list(figures.values()))
-            x, y = 3, 0
+            x = 3
+            y = 0
             if not can_place(board, current_figure, x, y):
                 print(f"Score: {score}")
                 break
